@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Sreehari S</title>
     <link rel="icon" href="https://media-exp1.licdn.com/dms/image/C4E03AQFNMwdQyojyRQ/profile-displayphoto-shrink_200_200/0/1633669944748?e=1642032000&v=beta&t=_5CvZMFqiF4KTf9blcX_BzYmGODBkkmPGM4NYUao9Fc" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -215,55 +216,76 @@
 
     <section class="bg-light p-4 container-fluid" id="contactSection">
         <div class="container"><br><br>
-            <h1 class="text-center"><u> CONTACT ME</u></h1><br><br>
+            <h1 class="text-center"><u> CONTACT-FORM</u></h1><br><br>
             <div class="row">
-                <form style="width: 100%;" id="gform" method="post" action="https://script.google.com/macros/s/AKfycbw6TFqyJof7ce3my_Fm_Y3dyl1qEC5HK-rlhchrNtwraBQkUaUjeFbPE7KjVbnjtzKcJA/exec">
+                <form style="width: 100%;" id="submit-form" action="">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputName">Name</label>
-                          <input type="text" class="form-control" id="inputName" placeholder="Name">
+                          <input type="text" name="Name" class="form-control" id="inputName" placeholder="Name">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPlace">Place</label>
-                            <input type="text" class="form-control" id="inputPlace" placeholder="Place">
+                            <input type="text" name="Place" class="form-control" id="inputPlace" placeholder="Place">
                         </div>
                       </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        <input type="email" name="Email" class="form-control" id="inputEmail4" placeholder="Email">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputPhone">Mobile Number</label>
-                        <input type="text" class="form-control" id="inputPhone" placeholder="Mobile Number">
+                        <input type="text" name="Mobile Number" class="form-control" id="inputPhone" placeholder="Mobile Number">
                       </div>
                     </div>        
                     <div> 
                       <div class="form-group">
                         <label for="inputAddress">Comments..</label>
-                        <textarea class="form-control" id="" cols="30" rows="10" placeholder="Type your messages here!"></textarea>
+                        <textarea class="form-control" name="Comments" id="" cols="30" rows="10" placeholder="Type your messages here!"></textarea>
                       </div>
                     </div>
                     <div class="form-group text-center">
                         <button  type="submit" class="btn btn-primary submitbtn">Submit</button>
                     </div><hr>                    
-                  </form>
+                  </form>                
             </div>
         </div>
     </section>
+
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbyVreZpvpHmQuMDcKU9uXufI2DMgSZuFfzQy-8Ww8Llm7pyUoSWd7WAvUHmbqKNMPkQzg/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
     
     <footer class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center"><br><br>
                     <a href="https://stackoverflow.com/users/17259485/sreehari-s" class="fab fa-stack-overflow socialmedia"></a>
-                    <a href="https://github.com/sreeharipdsy" class="fab fa-github socialmedia"></a>                   
+                    <a href="https://github.com/sreeharipdsy" class="fab fa-github socialmedia"></a>      
+                    <a href="https://wa.me/+918078576689" class="fab fa-whatsapp socialmedia"></a>             
                     <a href="mailto: sreehari.pdsy@gmail.com" class="fas fa-envelope socialmedia"></a>
                     <a href="https://www.instagram.com/sreehari.pdsy/?utm_medium=copy_link" class="fab fa-instagram socialmedia"></a>
                     <a href="https://t.me/sreehari_pdsy" class="fab fa-telegram socialmedia"></a>
                     <a href="https://www.youtube.com/channel/UCXc6-MsXcIskSOaExQnN6AQ" class="fab fa-youtube socialmedia"></a>
                     <a href="https://www.linkedin.com/in/sreehari-s-608023218/" class="fab fa-linkedin socialmedia"></a><br><br>
-                    <p style="color: white; ">Copyrights © 2021 sreehari.pdsy All Rights Reserved.</p>
+                    <p style="color: white; font-size: 12px;">Copyrights © 2021 sreeharipdsy.com All Rights Reserved.</p>
                 </div>
             </div>
         </div> 
@@ -272,7 +294,6 @@
     
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8a1d843879.js" crossorigin="anonymous"></script>
