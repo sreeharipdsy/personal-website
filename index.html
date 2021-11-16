@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Sreehari S</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="https://media-exp1.licdn.com/dms/image/C4E03AQFNMwdQyojyRQ/profile-displayphoto-shrink_200_200/0/1633669944748?e=1642032000&v=beta&t=_5CvZMFqiF4KTf9blcX_BzYmGODBkkmPGM4NYUao9Fc" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -14,50 +14,45 @@
 <body>
     
 
-    <header class="bg-dark header"\>
-        <div class="row text-white">
-            <div class="col-md-6 col-9 p-2 pl-5">
-                <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">SREEHARI S</h1>
+    <header class="bg-dark header">
+        <div class="row text-black">
+            <div class="col-md-6 col-12 pl-5">
+                <h1 class="sreehari">SREEHARI S</h1>
             </div>
             
-            <div class="col-md-6 col-3 my-auto">
+            <div class="col-md-6 my-auto">
             
-                <nav class="navbar navbar-expand-lg navbar-light ">
-                    
-                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon "></span>
-                    </button>
-                  
+                <nav class="navbar navbar-expand-lg navbar-light "> 
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     
                         <ul class="navbar-nav navbarstyle">
                             <li class="nav-item active">
-                                <a class="nav-link text-white" href="#homeSection">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link text-white navbarcontent" href="#homeSection">Home <span class="sr-only">(current)</span></a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#aboutSection">About</a>
-                            </li> 
-
-                        
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#serviceSection">Services</a>
+                                <a class="nav-link text-white navbarcontent" href="#aboutSection">About</a>
                             </li> 
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#experienceSection">Experience</a>
+                                <a class="nav-link text-white navbarcontent" href="#serviceSection">Services</a>
+                            </li> 
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white navbarcontent" href="#experienceSection">Experience</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#skillSection">Skills</a>
+                                <a class="nav-link text-white navbarcontent" href="#skillSection">Skills</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#educationSection">Education</a>
+                                <a class="nav-link text-white navbarcontent" href="#educationSection">Education</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#contactSection">Contact</a>
+                                <a class="nav-link text-white navbarcontent" href="#contactSection">Contact</a>
                             </li>
                         </ul>
                 
@@ -216,7 +211,7 @@
 
     <section class="bg-light p-4 container-fluid" id="contactSection">
         <div class="container"><br><br>
-            <h1 class="text-center"><u> CONTACT-FORM</u></h1><br><br>
+            <h1 class="text-center"><u> CONTACT-FORM</u></h1>
             <div class="row">
                 <form style="width: 100%;" id="submit-form" action="">
                     <div class="form-row">
@@ -240,18 +235,19 @@
                       </div>
                     </div>        
                     <div> 
-                      <div class="form-group">
+                      <div class="form-group ">
                         <label for="inputAddress">Comments..</label>
-                        <textarea class="form-control" name="Comments" id="" cols="30" rows="10" placeholder="Type your messages here!"></textarea>
+                        <textarea class="form-control" style="height: 3em;" name="Comments" id="" cols="30" rows="10" placeholder="Type your messages here!"></textarea>
                       </div>
                     </div>
                     <div class="form-group text-center">
                         <button  type="submit" class="btn btn-primary submitbtn">Submit</button>
-                    </div><hr>                    
+                    </div>                  
                   </form>                
             </div>
         </div>
     </section>
+    
     <script>
         $("#submit-form").submit((e)=>{
             e.preventDefault()
@@ -271,6 +267,7 @@
             })
         })
     </script>    
+    
     <footer class="bg-dark">
         <div class="container">
             <div class="row">
@@ -292,9 +289,11 @@
     
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8a1d843879.js" crossorigin="anonymous"></script>
-    
+
+
 </body>
 </html>
