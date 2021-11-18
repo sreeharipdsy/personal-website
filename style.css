@@ -337,3 +337,10 @@
     text-decoration: none;
     padding-inline: 2px
 }
+.copyRights{
+    color: white;
+}
+.copyRights:hover{
+    color: white;
+    text-decoration: none;
+}
