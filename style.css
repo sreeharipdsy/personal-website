@@ -45,6 +45,9 @@
 .educationcardbody{
     font-weight: bold;
 }
+.card{
+    height: 28em;
+}
 .progress {
     width: 150px;
     height: 150px;
